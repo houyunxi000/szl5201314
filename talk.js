@@ -111,8 +111,8 @@ function modal(content, callback) {
 
 function drawHeiheihei() {
     var moon = document.getElementById("heiheihei");
-    var centerX = canvas.width/3,
-        centerY = canvas.height/2-230,
+    var centerX = canvas.width/2-50,
+        centerY = canvas.height/3,
         width = 100;
     if (moon.complete) {
         ctx.drawImage(moon, centerX, centerY, width, width)
@@ -126,8 +126,8 @@ function drawHeiheihei() {
 
 function drawHaobuhaoma() {
     var moon = document.getElementById("haobuhaoma");
-    var centerX = canvas.width/3,
-        centerY = 250,
+    var centerX = canvas.width/2-50,
+        centerY = canvas.height/3,
         width = 100;
     if (moon.complete) {
         ctx.drawImage(moon, centerX, centerY, width, width)
