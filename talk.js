@@ -1,32 +1,45 @@
-$(function() {
-    $('#yes').click(function(event) {
-        modal('我就知道小姐姐您一定会愿意的。(^_^)', function() {
-            $('.page_one').addClass('hide');
-            $('.page_two').removeClass('hide');
-            // typeWrite();
-            fireworks();
+$(function () {
+    $('#yes').click(function (event) {
+        modal('嘿嘿嘿！我就知道泽乐妹妹一定会愿意的。(^_^)',A1);
+        // typeWrite();
 
-        });
+
+
     });
-    $('#no').click(function(event) {
+    $('#no').click(function (event) {
         modal('明人不说暗话！', A);
     });
 });
+
+function A1(){
+    modal('小手一牵 陪着你今年、明年和年年！',A2);
+}
+
+function A2(){
+    modal('今后的新年你陪我 以后的新年我陪你 怎么样？？？',A3);
+}
+function A3(){
+    modal('就是这么无赖 嘿嘿嘿', function () {
+        $('.page_one').addClass('hide');
+        $('.page_two').removeClass('hide');
+        fireworks();
+    });
+}
 
 function A() {
     modal('我喜欢你！', B);
 }
 
 function B() {
-    modal('我知道你在等我这一句话', C);
+    modal('我就知道你在等我这一句话', C);
 }
 
 function C() {
-    modal('请您不要拒绝我', D);
+    modal('请泽乐妹妹不要拒绝我嘛好不好', D);
 }
 
 function D() {
-    modal('拒绝我，不存在的!!!', E);
+    modal('想拒绝我，不存在的!!!', E);
 }
 
 function E() {
@@ -34,7 +47,7 @@ function E() {
 }
 
 function F() {
-    modal('姐，跟我走吧', G);
+    modal('泽乐妹妹，跟我走吧', G);
 }
 
 function G() {
@@ -46,15 +59,19 @@ function H() {
 }
 
 function AA() {
-    modal('其实吧，我更会欺负你，嘿嘿嘿', I);
+    modal('而且的而且，我还会欺负你，嘿嘿嘿', I);
 }
 
 function I() {
     modal('爱你呀亲爱的。么么哒！', J)
 }
 
+function BB() {
+    modal('', J)
+}
+
 function J() {
-    modal('亲爱的孙泽乐公主殿下，新年快乐呀！！！', function() {
+    modal('愿我的小可爱在新的一年里 每天都开开心心快快乐乐的呀！！！\n 新年快乐！！！', function () {
         fireworks();
     });
 }
@@ -65,15 +82,15 @@ function fireworks() {
 }
 
 function modal(content, callback) {
-    var tpl = '<div class="container">'+
-        '<div class="mask"></div>'+
-        '<div class="modal">'+
-        '<p>'+ content +'</p>'+
-        '<button type="button" id="confirm" class="confirm">确定</button>'+
-        '</div>'+
+    var tpl = '<div class="container">' +
+        '<div class="mask"></div>' +
+        '<div class="modal">' +
+        '<p>' + content + '</p>' +
+        '<button type="button" id="confirm" class="confirm">确定</button>' +
+        '</div>' +
         '</div>';
     $('body').append(tpl);
-    $(document).on('click', '.confirm', function() {
+    $(document).on('click', '.confirm', function () {
         $('.container').remove();
         callback();
     });
