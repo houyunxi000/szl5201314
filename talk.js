@@ -26,31 +26,35 @@ function C() {
 }
 
 function D() {
-    modal('拒绝我，不存在的', E);
+    modal('拒绝我，不存在的!!!', E);
 }
 
 function E() {
-    modal('这辈子都不可能让你离开我', F);
+    modal('这辈子都不可能再离开我了，嘿嘿嘿', F);
 }
 
 function F() {
-    modal('跟我走吧', G);
+    modal('姐，跟我走吧', G);
 }
 
 function G() {
-    modal('房产证上写你名', H);
+    modal('我不仅会做饭', H);
 }
 
 function H() {
-    modal('我会做饭', I);
+    modal('我还会洗衣服', AA);
+}
+
+function AA() {
+    modal('其实吧，我更会欺负你，嘿嘿嘿', I);
 }
 
 function I() {
-    modal('爱你。么么哒！', J)
+    modal('爱你呀亲爱的。么么哒！', J)
 }
 
 function J() {
-    modal('行，我们去民政局登记吧', function() {
+    modal('亲爱的孙泽乐公主殿下，新年快乐呀！！！', function() {
         fireworks();
     });
 }
