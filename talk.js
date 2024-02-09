@@ -37,6 +37,7 @@ function B() {
 }
 
 function C() {
+    drawHaobuhaoma();
     modal('请泽乐妹妹不要拒绝我嘛好不好', D);
 }
 
@@ -100,6 +101,21 @@ function modal(content, callback) {
 
 function drawHeiheihei() {
     var moon = document.getElementById("heiheihei");
+    var centerX = canvas.width/2-50,
+        centerY = 250,
+        width = 100;
+    if (moon.complete) {
+        ctx.drawImage(moon, centerX, centerY, width, width)
+    } else {
+        moon.onload = function() {
+            ctx.drawImage(moon, centerX, centerY, width, width)
+        }
+    }
+    var index = 0;
+}
+
+function drawHaobuhaoma() {
+    var moon = document.getElementById("haobuhaoma");
     var centerX = canvas.width/2-50,
         centerY = 250,
         width = 100;
