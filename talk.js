@@ -19,7 +19,9 @@ function A2(){
     modal('今后的新年你陪我 以后的新年我陪你 怎么样？？？',A3);
 }
 function A3(){
+    drawHeiheihei();
     modal('就是这么无赖 嘿嘿嘿', function () {
+
         $('.page_one').addClass('hide');
         $('.page_two').removeClass('hide');
         fireworks();
@@ -94,4 +96,19 @@ function modal(content, callback) {
         $('.container').remove();
         callback();
     });
+}
+
+function drawHeiheihei() {
+    var moon = document.getElementById("heiheihei");
+    var centerX = canvas.width/2-50,
+        centerY = 250,
+        width = 100;
+    if (moon.complete) {
+        ctx.drawImage(moon, centerX, centerY, width, width)
+    } else {
+        moon.onload = function() {
+            ctx.drawImage(moon, centerX, centerY, width, width)
+        }
+    }
+    var index = 0;
 }

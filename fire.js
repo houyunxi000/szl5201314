@@ -55,6 +55,8 @@ function animate() {
         this.paint()
     });
     drawMoon();
+    drawHeihei();
+    // drawHeiheihei();
     bigbooms.foreach(function(index) {
         var that = this;
         if (!this.dead) {
@@ -97,6 +99,37 @@ function drawMoon() {
         ctx.restore()
     }
 }
+
+function drawHeihei() {
+    var moon = document.getElementById("heihei");
+    var centerX = canvas.width - 600,
+        centerY = 100,
+        width = 100;
+    if (moon.complete) {
+        ctx.drawImage(moon, centerX, centerY, width, width)
+    } else {
+        moon.onload = function() {
+            ctx.drawImage(moon, centerX, centerY, width, width)
+        }
+    }
+    var index = 0;
+}
+
+function drawHeiheihei() {
+    var moon = document.getElementById("heiheihei");
+    var centerX = canvas.width - 600,
+        centerY = 250,
+        width = 100;
+    if (moon.complete) {
+        ctx.drawImage(moon, centerX, centerY, width, width)
+    } else {
+        moon.onload = function() {
+            ctx.drawImage(moon, centerX, centerY, width, width)
+        }
+    }
+    var index = 0;
+}
+
 Array.prototype.foreach = function(callback) {
     for (var i = 0; i < this.length; i++) {
         if (this[i] !== null) {
